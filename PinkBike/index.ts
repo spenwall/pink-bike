@@ -21,6 +21,7 @@ const timerTrigger: AzureFunction = async function (context: Context, myTimer: a
             if (oldAds.includes(adId)) {
                 return
             }
+
             let myAd = {
                 title: $(ad).find('table:nth-child(1) tbody:nth-child(1) tr:nth-child(1) td:nth-child(2) div:nth-child(1) a:nth-child(1)').text(),
                 price: $(ad).find('td:nth-child(2) table tr:nth-child(3) b').text(),

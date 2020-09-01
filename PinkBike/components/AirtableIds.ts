@@ -42,6 +42,7 @@ module.exports.getLastIds = async (url) => {
   module.exports.saveIds = async (url, ids) => {
     const select = 'AND(url = "' + url + '")';
     
+    console.log('saving ids', ids)
     try {
         let row = await base("lastAd")
           .select({

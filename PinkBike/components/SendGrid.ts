@@ -21,6 +21,7 @@ module.exports = async (ad) => {
     }
 
     try {
+        console.log('sending mail', msg)
         await sendgrid.send(msg)
     } catch (error) {
         console.log(error)    
